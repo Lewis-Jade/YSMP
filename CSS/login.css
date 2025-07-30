@@ -74,6 +74,12 @@
       cursor: pointer;
       transition: .5s ease-in-out;
     }
+    #error{
+      color: red;
+      font-size: 15px;
+      margin-left: 30px;
+      padding: 10px;
+    }
 
     button:hover {
    background-color: #180e46;

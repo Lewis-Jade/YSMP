@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +40,17 @@
       <input type="password" id="password" name="password" placeholder="password" required>
 
       <button type="submit">Login</button>
+      <?php
+       if (isset($_SESSION['error'])) {
+            echo '<p  id="error" >'.$_SESSION['error'].'<p>';
+
+             unset($_SESSION['error']);
+        }
+
+      
+      ?>
+
+    
     </form>
 
     <div class="form-footer">
@@ -43,12 +63,7 @@
   
 
 </body>
-<script>
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Login submitted successfully!');
-    });
-  </script>
+
 </html>
 
 

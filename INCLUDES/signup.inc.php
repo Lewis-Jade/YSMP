@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'dbcon.php'; // ← Connect to your database here (use PDO for security)
 
 function sanitize($input) {
